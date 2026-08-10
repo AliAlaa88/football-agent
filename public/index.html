@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarcaAgent - Telegram Agent</title>
+    <style>
+        :root {
+            --primary: #004d98; /* Barca Blue */
+            --secondary: #a50044; /* Barca Red */
+            --bg: #121212;
+            --surface: #1e1e1e;
+            --text: #ffffff;
+            --text-muted: #aaaaaa;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: var(--surface);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 500px;
+            border-top: 4px solid var(--primary);
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        h1 {
+            margin-top: 0;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.5rem 1rem;
+            background-color: rgba(0, 255, 0, 0.1);
+            color: #4ade80;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BarcaAgent</h1>
+        <p>Your intelligent Telegram assistant with ReAct reasoning, MCP mock tools, and Supabase vector search.</p>
+        <div class="status">Agent Service Online 🚀</div>
+    </div>
+</body>
+</html>
