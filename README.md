@@ -13,7 +13,7 @@ A multi-tool AI Agent built from scratch to act as a World Cup 2026 & Transferma
 *   **Model Context Protocol Mock:** Integrated the [transfermarkt-api](https://github.com/felipeall/transfermarkt-api) as a set of dynamically executed local tools, enabling the agent to fetch live football statistics and player profiles.
 
 ## Tech Stack
-*   **Logic & Routing:** Node.js & Python (FastAPI)
+*   **Logic & Routing:** Node.js, Python (FastAPI), Vercel Serverless
 *   **Intelligence:** Groq API
 *   **Embeddings:** HuggingFace Transformers.js (WebAssembly)
 *   **Database:** Supabase (PostgreSQL, pgvector)
