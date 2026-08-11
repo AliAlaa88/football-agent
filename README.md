@@ -18,6 +18,9 @@ A multi-tool AI Agent built from scratch to act as a World Cup 2026 expert. This
 *   **External Data:** Tavily Search API
 *   **Interface:** Telegram Bot API
 
+## 🔮 Future Roadmap
+*   **MCP (Model Context Protocol) Integration:** Currently, tools are hardcoded into the agent logic. The next evolution is to expose these tools (like `query_docs` and `search_news`) as an official **MCP Server**. This will decouple the tools from the Telegram bot, allowing any MCP-compatible client (like Claude Desktop or Cursor IDE) to connect to the agent's World Cup database and capabilities natively.
+
 ## Demo
 ![Screenshot 1](imgs/Screenshot%202026-08-11%20094812.png)
 ![Screenshot 2](imgs/Screenshot%202026-08-11%20094912.png)
