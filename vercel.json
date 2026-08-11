@@ -1,18 +1,8 @@
 {
-  "builds": [
-    {
-      "src": "api/webhook.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/tfmkt.py",
-      "use": "@vercel/python"
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/tfmkt/(.*)",
-      "destination": "/api/tfmkt"
+      "destination": "/api/tfmkt.py"
     }
   ]
 }
