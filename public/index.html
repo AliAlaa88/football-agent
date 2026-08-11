@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BarcaAgent AI</title>
+    <title>Football Agent AI</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="chat-container">
         <header class="chat-header">
             <div class="header-info">
-                <h1>BarcaAgent</h1>
+                <h1>Football Agent</h1>
                 <p>World Cup 2026 & Transfermarkt Expert</p>
+                <div class="available-tools">
+                    <span class="tool-badge">🔍 search_news</span>
+                    <span class="tool-badge">📚 query_docs</span>
+                    <span class="tool-badge">⚽ search_players</span>
+                    <span class="tool-badge">📈 get_player_info</span>
+                </div>
             </div>
             <div class="status-indicator">
                 <span class="pulse"></span> Online
@@ -21,13 +27,19 @@
         <div id="chat-feed" class="chat-feed">
             <div class="message assistant">
                 <div class="message-content">
-                    Hello! I am BarcaAgent. I can query local documents, search the web, and pull live football data from Transfermarkt. How can I help you today?
+                    Hello! I am Football Agent. I can query local documents, search the web, and pull live football data from Transfermarkt. How can I help you today?
                 </div>
             </div>
         </div>
 
+        <div class="suggested-messages">
+            <button class="suggested-btn">List the world cup 26 award winners</button>
+            <button class="suggested-btn">get player info about mostafa zico</button>
+            <button class="suggested-btn">Who was the opening match rivals in 2026 world cup</button>
+        </div>
+
         <form id="chat-form" class="chat-input-area">
-            <input type="text" id="chat-input" placeholder="Ask about Emam Ashour or the 2026 World Cup..." required autocomplete="off">
+            <input type="text" id="chat-input" placeholder="Ask about the 2026 World Cup or search players..." required autocomplete="off">
             <button type="submit" id="send-button">
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             </button>

@@ -1,6 +1,6 @@
-# Football Agent AI
+# Football Agent
 
-A multi-tool AI Agent built from scratch to act as a World Cup 2026 expert. This project demonstrates advanced agentic workflows, RAG, and custom tool execution without relying on heavy abstractions like LangChain.
+A multi-tool AI Agent built from scratch to act as a World Cup 2026 & Transfermarkt expert. It seamlessly combines LLM intelligence, local embeddings, and vector RAG (via Supabase) to deliver precise football insights without relying on heavy abstractions like LangChain.
 
 ## Key Technical Achievements
 

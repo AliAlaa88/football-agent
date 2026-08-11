@@ -83,6 +83,12 @@ chatForm.addEventListener('submit', async (e) => {
     const message = chatInput.value.trim();
     if (!message) return;
 
+    // Remove suggested messages on first send
+    const suggested = document.querySelector('.suggested-messages');
+    if (suggested) {
+        suggested.remove();
+    }
+
     // UI Updates
     appendUserMessage(message);
     chatInput.value = '';
@@ -118,4 +124,14 @@ chatForm.addEventListener('submit', async (e) => {
         sendButton.disabled = false;
         chatInput.focus();
     }
+});
+
+// Handle suggested messages clicks
+const suggestedBtns = document.querySelectorAll('.suggested-btn');
+suggestedBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        chatInput.value = btn.textContent;
+        // Trigger the form submit event programmatically
+        chatForm.dispatchEvent(new Event('submit'));
+    });
 });

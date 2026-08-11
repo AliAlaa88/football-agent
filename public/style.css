@@ -67,6 +67,13 @@ body {
 .header-info p {
     font-size: 0.875rem;
     color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.available-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
 }
 
 .status-indicator {
@@ -191,6 +198,30 @@ body {
 @keyframes bounce {
     0%, 80%, 100% { transform: scale(0); }
     40% { transform: scale(1); }
+}
+
+.suggested-messages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.suggested-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.suggested-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    transform: translateY(-2px);
 }
 
 .chat-input-area {
