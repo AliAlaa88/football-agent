@@ -17,13 +17,28 @@ export default async function handler(req, res) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ chat_id: chatId, action: "typing" })
     });
+    const shouldPost = userText.toLowerCase().includes('post') && userText.toLowerCase().includes('channel');
     const replyText = await runAgentLoop(chatId, userText);
+
+    if (shouldPost) {
+      await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: "-1004491535539",
+          text: replyText
+        })
+      });
+    }
+
+    const finalReply = shouldPost ? `✅ Successfully posted to channel:\n\n${replyText}` : replyText;
+
     const teleRes = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: chatId,
-        text: replyText
+        text: finalReply
       })
     });
     if (!teleRes.ok) {
