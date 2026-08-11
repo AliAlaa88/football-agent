@@ -3,69 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BarcaAgent - Telegram Agent</title>
-    <style>
-        :root {
-            --primary: #004d98; /* Barca Blue */
-            --secondary: #a50044; /* Barca Red */
-            --bg: #121212;
-            --surface: #1e1e1e;
-            --text: #ffffff;
-            --text-muted: #aaaaaa;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            background-color: var(--surface);
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            text-align: center;
-            max-width: 500px;
-            border-top: 4px solid var(--primary);
-            border-bottom: 4px solid var(--secondary);
-        }
-
-        h1 {
-            margin-top: 0;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2.5rem;
-        }
-
-        p {
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .status {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.5rem 1rem;
-            background-color: rgba(0, 255, 0, 0.1);
-            color: #4ade80;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-    </style>
+    <title>BarcaAgent AI</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>BarcaAgent</h1>
-        <p>Your intelligent Telegram assistant with ReAct reasoning, MCP mock tools, and Supabase vector search.</p>
-        <div class="status">Agent Service Online 🚀</div>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-info">
+                <h1>BarcaAgent</h1>
+                <p>World Cup 2026 & Transfermarkt Expert</p>
+            </div>
+            <div class="status-indicator">
+                <span class="pulse"></span> Online
+            </div>
+        </header>
+
+        <div id="chat-feed" class="chat-feed">
+            <div class="message assistant">
+                <div class="message-content">
+                    Hello! I am BarcaAgent. I can query local documents, search the web, and pull live football data from Transfermarkt. How can I help you today?
+                </div>
+            </div>
+        </div>
+
+        <form id="chat-form" class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask about Emam Ashour or the 2026 World Cup..." required autocomplete="off">
+            <button type="submit" id="send-button">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </form>
     </div>
+
+    <!-- Script loaded at the end -->
+    <script src="/app.js"></script>
 </body>
 </html>

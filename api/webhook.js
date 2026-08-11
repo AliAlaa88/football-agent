@@ -21,7 +21,9 @@ export default async function handler(req, res) {
     const host = req.headers.host;
     const protocol = req.headers['x-forwarded-proto'] || 'https';
     const baseUrl = host ? `${protocol}://${host}` : undefined;
-    const replyText = await runAgentLoop(chatId, userText, baseUrl);
+    
+    const { reply, toolsUsed } = await runAgentLoop(chatId, userText, baseUrl);
+    let replyText = reply;
 
     if (shouldPost) {
       await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
