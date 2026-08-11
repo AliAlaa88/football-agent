@@ -5,14 +5,14 @@
       "use": "@vercel/node"
     },
     {
-      "src": "transfermarkt-api/app/main.py",
+      "src": "api/tfmkt.py",
       "use": "@vercel/python"
     }
   ],
   "rewrites": [
     {
       "source": "/api/tfmkt/(.*)",
-      "destination": "transfermarkt-api/app/main.py"
+      "destination": "api/tfmkt.py"
     }
   ]
 }

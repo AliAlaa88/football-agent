@@ -20,8 +20,7 @@ A multi-tool AI Agent built from scratch to act as a World Cup 2026 expert. This
 *   **Interface:** Telegram Bot API
 
 ## Demo
-![Transfermarkt API Integration](imgs/image.png)
-*Demonstrating live data fetched from the Transfermarkt API.*
-
 ![Screenshot 1](imgs/Screenshot%202026-08-11%20094812.png)
 ![Screenshot 2](imgs/Screenshot%202026-08-11%20094912.png)
+![Transfermarkt API Integration](imgs/image.png)
+*Demonstrating live data fetched from the Transfermarkt API.*
