@@ -1,4 +1,6 @@
-# Football Agent
+# Football Agent ⚽🤖
+
+<video src="https://github.com/AliAlaa88/football-agent/raw/main/assets/demo.mp4" controls width="100%"></video>
 
 <video src="https://github.com/AliAlaa88/football-agent/raw/main/assets/demo.mp4" controls width="100%"></video>
 
