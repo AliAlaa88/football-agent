@@ -34,6 +34,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply, toolsUsed });
   } catch (error) {
     console.error("Chat API error:", error);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    return res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 }

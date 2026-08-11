@@ -104,7 +104,8 @@ chatForm.addEventListener('submit', async (e) => {
         });
 
         if (!response.ok) {
-            throw new Error(`Server returned ${response.status}`);
+            const errData = await response.json().catch(() => null);
+            throw new Error(errData && errData.error ? errData.error : `Server returned ${response.status}`);
         }
 
         const data = await response.json();
@@ -118,7 +119,8 @@ chatForm.addEventListener('submit', async (e) => {
     } catch (error) {
         console.error("Chat error:", error);
         removeTypingIndicator();
-        appendAssistantMessage("⚠️ Connection error. Please try again.");
+        // Display specific error string in the UI
+        appendAssistantMessage(`⚠️ Error: ${error.message}`);
     } finally {
         chatInput.disabled = false;
         sendButton.disabled = false;
