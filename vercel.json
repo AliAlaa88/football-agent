@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "api/webhook.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "transfermarkt-api/app/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/tfmkt/(.*)",
+      "destination": "transfermarkt-api/app/main.py"
+    }
+  ]
+}
