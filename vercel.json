@@ -1,4 +1,12 @@
 {
+  "functions": {
+    "api/webhook.js": {
+      "maxDuration": 60
+    },
+    "api/tfmkt.py": {
+      "maxDuration": 60
+    }
+  },
   "rewrites": [
     {
       "source": "/api/tfmkt/(.*)",
