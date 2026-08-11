@@ -18,7 +18,10 @@ export default async function handler(req, res) {
       body: JSON.stringify({ chat_id: chatId, action: "typing" })
     });
     const shouldPost = userText.toLowerCase().includes('post') && userText.toLowerCase().includes('channel');
-    const replyText = await runAgentLoop(chatId, userText);
+    const host = req.headers.host;
+    const protocol = req.headers['x-forwarded-proto'] || 'https';
+    const baseUrl = host ? `${protocol}://${host}` : undefined;
+    const replyText = await runAgentLoop(chatId, userText, baseUrl);
 
     if (shouldPost) {
       await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
