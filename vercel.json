@@ -12,7 +12,7 @@
   "rewrites": [
     {
       "source": "/api/tfmkt/(.*)",
-      "destination": "api/tfmkt.py"
+      "destination": "/api/tfmkt"
     }
   ]
 }
