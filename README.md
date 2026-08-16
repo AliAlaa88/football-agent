@@ -1,6 +1,10 @@
 # Football Agent - [Live Demo](https://football-agent-rho.vercel.app/)
 
-<video controls src="assets/demo.mp4" width="100%" controls></video>
+
+
+https://github.com/user-attachments/assets/fb6b9e34-aeff-4d0c-8617-a37c9a15b2ca
+
+
 
 A multi-tool AI Agent built from scratch to act as a World Cup 2026 & Transfermarkt expert. It seamlessly combines LLM intelligence, local embeddings, and vector RAG (via Supabase) to deliver precise football insights without relying on heavy abstractions like LangChain.
 
